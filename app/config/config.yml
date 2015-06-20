@@ -8,6 +8,8 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
+    # Blogger max latest comments
+    blogger_blog.comments.latest_comment_limit: 10
 
 framework:
     #esi:             ~
@@ -41,7 +43,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    bundles:        [BloggerBlogBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
